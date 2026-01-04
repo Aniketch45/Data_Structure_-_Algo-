@@ -1,4 +1,4 @@
-#by using numpy module
+# 2) by using numpy module
 from numpy import *
 
 #heterogenous array we can declare using numpy
@@ -34,29 +34,29 @@ from numpy import *
 # for x in arr:
 #     print(x,end = " ")
 
-# arr = full(10,2)
-# for x in arr:
-#     print(x,end = " ")
+arr = full(10,2)       # 2 ten times
+for x in arr:
+    print(x,end = " ")
 
 #Multi-Dimensional Array
 # arr = array(10)
 # print(arr)
 
-arr = array([10,20,30,60])
-print(arr)
+# arr = array([10,20,30,60])
+# print(arr)
 
-# two dim array
-arr = array([[10,20,30],[40,50,60]])
-print(arr)
+# # two dim array
+# arr = array([[10,20,30],[40,50,60]])
+# print(arr)
 
-# three dim array         dimension must be same
-arr = array([[[1,2,4],[5,6,8]],[[8,9,8],[6,8,2]]])
-print(arr)
+# # three dim array         dimension must be same
+# arr = array([[[1,2,4],[5,6,8]],[[8,9,8],[6,8,2]]])
+# print(arr)
 
-#by using array module
+# 1) by using array module
 #from array import *
 
-# arr = array('i',[10,20,30,40,50,60])
+# arr = array('i',[10,20,30,40,50,60])       # i is typecode
 
 # arr.insert(2,88)
 # arr.append(77)
