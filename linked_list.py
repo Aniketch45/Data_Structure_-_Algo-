@@ -32,7 +32,21 @@ class SinglyLinkedList:
                 temp.next = t1.next
                 t1.next = temp
             t1 = t1.next
-
+        
+    def deleteLL(self,value):
+        t1 = self.head
+        prev = t1   
+        if(t1.data == value):
+            self.head = t1.next
+        while(t1.next != None):
+            if(t1.data == value):
+                prev.next = t1.next
+                return
+            prev = t1
+            t1 = t1.next
+        if(t1.data == value):
+            prev.next = None
+            
     def printLL(self):
          t1 = self.head
          while(t1.next != None):
@@ -44,6 +58,17 @@ obj = SinglyLinkedList()
 obj.InsertAtEnd(10)
 obj.InsertAtEnd(20)
 obj.InsertAtEnd(30)
+obj.InsertAtEnd(70)
 obj.insertAtBeg(9)
-obj.insertInMid(25,20)
+# obj.insertInMid(25,20)
+obj.deleteLL(70)
 obj.printLL() 
+
+
+# 2) Doubly Linked List
+
+
+
+
+#3) Circular Linked List
+
