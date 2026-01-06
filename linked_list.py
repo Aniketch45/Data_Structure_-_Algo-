@@ -63,12 +63,3 @@ obj.insertAtBeg(9)
 # obj.insertInMid(25,20)
 obj.deleteLL(70)
 obj.printLL() 
-
-
-# 2) Doubly Linked List
-
-
-
-
-#3) Circular Linked List
-
