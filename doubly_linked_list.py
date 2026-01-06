@@ -31,20 +31,39 @@ class DoublyLL():
         temp = Node(value)
         t = self.head
 
-        # if(t.data == x):
-        #     temp.next = t
-        #     t.prev = temp
-        #     self.head = temp
-
         while(t.next != None):
             if(t.data == x):
-                temp.next = t.next
-                t.next.prev = temp
-                t.next = temp
-                temp.prev = t
+               break
             else:
-                t.next = temp
-                temp.prev = t
+                t = t.next
+        temp = Node(value)
+        temp.next = t.next
+        t.prev = temp
+        t.next = temp
+        temp.prev = t
+    
+    def deleteDLL(self,value):
+        if(self.head == None):
+            print("list is Empty")
+            return
+        
+        
+
+        t = self.head
+        if(t.data == value):
+            self.head == t.next
+            self.head.prev = None
+            return
+        
+        while(t.next !=None):
+            if(t.data == value):
+                t.prev.next = t.next
+                t.next.prev = t.prev
+                return
+        
+        if(t.data == value):
+            t.prev.next = None
+        
         
     def printDLL(self):
         t = self.head
@@ -55,11 +74,13 @@ class DoublyLL():
 
 
 obj = DoublyLL()
-# obj.InsertAtEnd(30)
-# obj.InsertAtEnd(20)
-# obj.InsertAtEnd(50)
-# obj.InsertAtEnd(90)
-# obj.InsertAtBeg(6)
-# obj.InsertAtMid(70,50)
-# obj.printDLL()
+obj.InsertAtEnd(30)
+obj.InsertAtEnd(20)
+obj.InsertAtEnd(50)
+obj.InsertAtEnd(90)
+obj.InsertAtBeg(6)
+obj.InsertAtMid(70,50)
+obj.InsertAtMid(99,50)
+obj.deleteDLL(50)
+obj.printDLL()
         
