@@ -46,23 +46,24 @@ class DoublyLL():
         if(self.head == None):
             print("list is Empty")
             return
-        
-        
 
         t = self.head
         if(t.data == value):
-            self.head == t.next
+            self.head = t.next
             self.head.prev = None
             return
         
-        while(t.next !=None):
+        while(t.next != None):
             if(t.data == value):
                 t.prev.next = t.next
                 t.next.prev = t.prev
-                return
-        
+            t = t.next
+            print("test")
+               
         if(t.data == value):
             t.prev.next = None
+            print("test2")
+        
         
         
     def printDLL(self):
@@ -79,8 +80,8 @@ obj.InsertAtEnd(20)
 obj.InsertAtEnd(50)
 obj.InsertAtEnd(90)
 obj.InsertAtBeg(6)
-obj.InsertAtMid(70,50)
-obj.InsertAtMid(99,50)
-obj.deleteDLL(50)
+# obj.InsertAtMid(70,50)
+# obj.InsertAtMid(99,50)
+obj.deleteDLL(90)
 obj.printDLL()
         
